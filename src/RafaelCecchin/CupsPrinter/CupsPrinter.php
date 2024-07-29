@@ -31,9 +31,9 @@ class CupsPrinter
         return $requestId;
     }
 
-    public function cmdPrintCommand(String $tempFile)
+    public function cmdPrintCommand(String $fileLocation)
     {
-        $cmd = "lp -h $this->printerServer -d $this->printerName $tempFile";
+        $cmd = "lp -h $this->printerServer -d $this->printerName $fileLocation";
 
         return $cmd;
     }
