@@ -2,6 +2,10 @@
 
 After spending a lot of time searching for a simple solution to print files directly from PHP, I decided to create my own Composer library. 🚀
 
+```bash
+composer require rafaelcecchin/cups-printer
+```
+
 Initially, I thought it would be easier to find a solution that fits different environments, but I was mistaken. Many of the existing solutions for printing with CUPS + PHP are outdated, involve a lot of code, and overlook the fact that many developers use Windows for development and Linux for production environments. 🖥️➡️🐧
 
 This project utilizes the CUPS command:
