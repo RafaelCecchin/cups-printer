@@ -1,0 +1,16 @@
+{
+    "name": "rafaelcecchin/cups-printer",
+    "description": "Simple CUPS printer",
+    "autoload": {
+        "psr-4": {
+            "RafaelCecchin\\CupsPrinter\\": "src/RafaelCecchin/CupsPrinter/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Rafael Cecchin",
+            "email": "contatorafaelcecchin@gmail.com"
+        }
+    ],
+    "require": {}
+}
