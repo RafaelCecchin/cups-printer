@@ -30,14 +30,7 @@ class CupsPrinter
 
         return $requestId;
     }
-
-    public function cmdPrintCommand(String $fileLocation)
-    {
-        $cmd = "lp -h $this->printerServer -d $this->printerName $fileLocation";
-
-        return $cmd;
-    }
-
+    
     public function obPrint($callback)
     {
         ob_start();
@@ -45,6 +38,13 @@ class CupsPrinter
         $out = ob_get_clean();
         $requestId = $this->printData($out);
         return $requestId;
+    }
+
+    public function cmdPrintCommand(String $fileLocation)
+    {
+        $cmd = "lp -h $this->printerServer -d $this->printerName $fileLocation";
+
+        return $cmd;
     }
 
     private function execPrint(String $cmdPrintCommand) 
