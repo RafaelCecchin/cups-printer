@@ -38,6 +38,15 @@ class CupsPrinter
         return $cmd;
     }
 
+    public function obPrint($callback)
+    {
+        ob_start();
+        $callback();
+        $out = ob_get_clean();
+        $requestId = $this->printData($out);
+        return $requestId;
+    }
+
     private function execPrint(String $cmdPrintCommand) 
     {
         exec($cmdPrintCommand, $cmdOutput, $returnVar);
